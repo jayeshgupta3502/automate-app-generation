@@ -63,8 +63,8 @@ function App() {
     <SafeAreaProvider>
       {/* <SafeAreaView> */}
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <AppWeb />
-      <Text>HAjasnjnsa</Text>
+      <AppContent />
+      {/* <Text>HAjasnjnsa</Text> */}
     </SafeAreaProvider>
   );
 }
@@ -74,15 +74,7 @@ function AppWeb() {
 
   return (
     <SafeAreaView style={{flex: 1}}>
-      <WebView
-        // source={{uri: 'http://192.168.3.127:3000'}}
-        source={{uri: 'http://10.239.209.171:3000'}}
-        style={{flex: 1}}
-        onMessage={(event) => {
-          const data = JSON.parse(event.nativeEvent.data);
-          console.log('WEBVIEW EVENT =>', data);
-        }}
-      />
+      {/* <WebView/ */}
     </SafeAreaView>
   );
 }
