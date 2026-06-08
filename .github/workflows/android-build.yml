@@ -27,11 +27,24 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build Debug APK
+      - name: Create Firebase Service Account
+        run: |
+          echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}' > firebase-service-account.json
+
+      - name: Build APK
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ github.workspace }}/firebase-service-account.json
         run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
+
+      - name: Upload to Firebase App Distribution
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ github.workspace }}/firebase-service-account.json
+        run: |
+          cd android
+          ./gradlew appDistributionUploadDebug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
