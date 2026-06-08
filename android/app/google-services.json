@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "940704110422",
+    "project_id": "automate-app-generation",
+    "storage_bucket": "automate-app-generation.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940704110422:android:4b220110f97344df4b68f7",
+        "android_client_info": {
+          "package_name": "com.poc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcUXdZaUPEaTM_SYBIDIN0I397UJyG92M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
